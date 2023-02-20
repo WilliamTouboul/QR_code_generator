@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #1c1e26;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    width: 100vw;
+}
+
+input[type="color"] {
+    border: none;
+    width: 32.5%;
+    height: 40px;
+    border-radius: 3px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.qr_text {
+    padding: 1rem;
+    display: block;
+    background-color: #181b29;
+    border: 1px #414886 solid;
+    border-radius: 4px;
+    width: 100%;
+    margin: 0 0.5rem 0 1rem 0;
+    color: white;
+    outline: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.qr_text::placeholder {
+    color: #414886;
+    font-weight: 500px;
+}
+
+#qr_code {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px #414886 solid;
+}
+
+#qr_code img,
+#qr_code canvas {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sizes {
+    width: 32.5%;
+    height: 40px;
+    color: white;
+    background: #181b29;
+    border: 1px solid #414886;
+    border-radius: 4px;
+    outline: none;
+}
+
+.btn {
+    color: #fff;
+    max-width: 160px;
+    padding: 14px;
+    background: rgb(106, 43, 255);
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex: 1;
+    margin: 2rem;
+}
+
+
+.action_container {
+    display: flex;
+    margin: 1rem 0;
+}
+
+@media (max-width:512px) {
+    body {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    #qr_code {
+        width: 90vw;
+        height: 95vw;
+    }
+
+    #qr_code img,
+    #qr_code canvas {
+        max-width: 95vw !important;
+        max-height: 90vw !important;
+    }
+
+    .btn {
+        min-width: unset;
+    }
+}
+
+@media (max-width:350px) {
+    .action_container {
+        flex-direction: column;
+    }
+
+    .share_btn {
+        margin-left: 0;
+        margin-top: 0.7rem;
+    }
+}
